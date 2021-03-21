@@ -7,23 +7,23 @@ function markerSize(mag) {
 
 function markerColor(mag) {
     if (mag <= 1) {
-        return "#999999";
+        return "#33a02c";
     } else if (mag <= 2) {
-        return "#f781bf";
+        return "#1f78b4";
     } else if (mag <= 3) {
-        return "#a65628";
+        return "#dbf622";
     } else if (mag <= 4) {
-        return "#ffff33";
+        return "#dd3497";
     } else if (mag <= 5) {
         return "#1f78b4";
     } else if (mag <= 6) {
-        return "#984ea3";
+        return "#b2182b";
     } else if (mag <= 7) {
-        return "#4daf4a";
+        return "#b2182b";
     } else if (mag <= 8) {
-        return "#377eb8";
+        return "#b2df8a";
     } else {
-        return "#e41a1c";
+        return "#33a02c";
     };
 
 }
@@ -65,23 +65,31 @@ function createMap(earthquakes) {
 
   // Define satelitemap and darkmap layers
     let satelitemap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
-    attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
-    maxZoom: 18,
-    id: "mapbox.satellite",
-    accessToken: API_KEY
+        attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+        maxZoom: 18,
+        id: "mapbox.satellite",
+        accessToken: API_KEY
     });
 
-    let darkmap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
-    attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
-    maxZoom: 18,
-    id: "mapbox.dark",
-    accessToken: API_KEY
+    let darkmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+        attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+        maxZoom: 18,
+        id: "dark-v10",
+        accessToken: API_KEY
+    });
+
+    let lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+        attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+        maxZoom: 18,
+        id: "light-v10",
+        accessToken: API_KEY
     });
 
   // Define a baseMaps object to hold our base layers
     let baseMaps = {
     "Satelite Map": satelitemap,
-    "Dark Map": darkmap
+    "Dark Map": darkmap,
+    "Light Map": lightmap
     };
 
   // Create overlay object to hold our overlay layer
@@ -93,12 +101,14 @@ function createMap(earthquakes) {
     let myMap = L.map("map", {
         center: [15.5994, -28.6731],
         zoom: 3,
-        layers: [satelitemap, darkmap, earthquakes]
+        layers: [satelitemap, earthquakes]
     });
 
     // Create a layer control
     // Pass in our baseMaps and overlayMaps
     // Add the layer control to the map
+    // https://leafletjs.com/examples/choropleth/
+    /* https://github.com/timwis/leaflet-choropleth/blob/gh-pages/examples/legend/demo.js */
     L.control.layers(baseMaps, overlayMaps, {
         collapsed: true
     }).addTo(myMap);
@@ -108,14 +118,17 @@ function createMap(earthquakes) {
     legend.onAdd = function () {
     
         let div = L.DomUtil.create('div', 'info legend'),
+            labels = ['<strong>Earthquake Mag.</strong>'],
             magnitudes = [0, 1, 2, 3, 4, 5];
     
         for (let i = 0; i < magnitudes.length; i++) {
             div.innerHTML +=
+            labels.push(
                 '<i style="background:' + markerColor(magnitudes[i] + 1) + '"></i> ' + 
-        + magnitudes[i] + (magnitudes[i + 1] ? ' - ' + magnitudes[i + 1] + '<br>' : ' + ');
+        + magnitudes[i] + (magnitudes[i + 1] ? ' - ' + magnitudes[i + 1] + '<br>' : ' + '));
         }
-    
+        div.innerHTML = labels.join('<br>', '<br>');
+        
         return div;
     };
     
