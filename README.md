@@ -18,7 +18,7 @@ The USGS is interested in building a new set of tools that will allow them visua
 
 The USGS provides earthquake data in a number of different formats, updated every 5 minutes. Visit the [USGS GeoJSON Feed](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php) page and pick a data set: 'All Earthquakes from the Past 30 Days'.
 <p align="center"><img align="center" width="75%" height="75%" src="Leaflet_Step_1/Images/3-Data.png")></p>
-<hr>
+<br>
 
  2. **Import & Visualize the Data**
 
@@ -31,7 +31,9 @@ The USGS provides earthquake data in a number of different formats, updated ever
    * Include popups that provide additional information about the earthquake when a marker is clicked.
 
    * Create a legend that will provide context for your map data.
-  
+
+<hr>
+
 ***Satellite Map Visualization***
  
     - First View Full Page
