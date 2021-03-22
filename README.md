@@ -1,7 +1,7 @@
 # leaflet-challenge
-**********************************
+******************************
 ### By Karla M. Murphy
-*********************************
+******************************
 
 * Deploy github page: [All Earthquakes around the world for the past 30 days](https://krla20.github.io/leaflet-challenge/)
 <p align="center"><img align="center" width="75%" height="75%" src="Leaflet-Step-1/Images/1-Logo.png")></p>
