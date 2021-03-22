@@ -12,7 +12,7 @@ The USGS is interested in building a new set of tools that will allow them visua
 <br>
 1. **Get your data set**
 The USGS provides earthquake data in a number of different formats, updated every 5 minutes. Visit the [USGS GeoJSON Feed](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php) page and pick a data set: 'All Earthquakes from the Past 30 Days'.
-<p align="center"><img align="center" width="75%" height="75%" src="Leaflet-Step-1/Images/3-Data.png")></p>
+<p align="center"><img align="center" width="75%" height="75%" src="Leaflet_Step_1/Images/3-Data.png")></p>
 <hr>
  2. **Import & Visualize the Data**
 
@@ -28,23 +28,23 @@ The USGS provides earthquake data in a number of different formats, updated ever
   
  ### Satellite Map Visualization
     - First View Full Page
-<p align="center"><img align="center" width="75%" height="75%" src="Leaflet-Step-1/Images/Satellite.PNG")></p>
+<p align="center"><img align="center" width="75%" height="75%" src="Leaflet_Step_1/Images/Satellite.PNG")></p>
 
     - First View Legend
-<p align="center"><img align="center" width="75%" height="75%" src="Leaflet-Step-1/Images/Earthquake_info.PNG")></p>
+<p align="center"><img align="center" width="75%" height="75%" src="Leaflet_Step_1/Images/Earthquake_info.PNG")></p>
 <hr>
  ### Dark Map Visualization
      - First View Full Page
-<p align="center"><img align="center" width="75%" height="75%" src="Leaflet-Step-1/Images/Dark.PNG")></p>
+<p align="center"><img align="center" width="75%" height="75%" src="Leaflet_Step_1/Images/Dark.PNG")></p>
 
     - First View Legend
-<p align="center"><img align="center" width="75%" height="75%" src="Leaflet-Step-1/Images/Earthquake_info_dark.PNG")></p>
+<p align="center"><img align="center" width="75%" height="75%" src="Leaflet_Step_1/Images/Earthquake_info_dark.PNG")></p>
 <hr>
  ### Light Map Visualization
      - First View Full Page
-<p align="center"><img align="center" width="75%" height="75%" src="Leaflet-Step-1/Images/Light.PNG")></p>
+<p align="center"><img align="center" width="75%" height="75%" src="Leaflet_Step_1/Images/Light.PNG")></p>
 
     - First View Legend
-<p align="center"><img align="center" width="75%" height="75%" src="Leaflet-Step-1/Images/Earthquake_info_light.PNG")></p>
+<p align="center"><img align="center" width="75%" height="75%" src="Leaflet_Step_1/Images/Earthquake_info_light.PNG")></p>
 <hr>
  
