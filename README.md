@@ -4,7 +4,7 @@
 *********************************
 
 * Deploy github page: [All Earthquakes around the world for the past 30 days](https://krla20.github.io/leaflet-challenge/)
-<p align="center"><img align="center" width="75%" height="75%" src=Images/1-Logo.png)></p>
+<p align="center"><img align="center" width="75%" height="75%" src=Leaflet-Step-1/Images/1-Logo.png)></p>
 
 Welcome to the United States Geological Survey, or USGS for short! The USGS is responsible for providing scientific data about natural hazards, the health of our ecosystems and environment; and the impacts of climate and land-use change. Their scientists develop new methods and tools to supply timely, relevant, and useful information about the Earth and its processes. As a new hire, you will be helping them out with an exciting new project!
 
