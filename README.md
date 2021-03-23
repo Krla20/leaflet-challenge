@@ -2,9 +2,7 @@
 ******************************
 ### By Karla M. Murphy
 ******************************
-
-Deploy github page didn't work: [All Earthquakes around the world for the past 30 days](https://krla20.github.io/leaflet-challenge/)
-                       
+         
 <p align="center"><img align="center" width="75%" height="75%" src="Leaflet_Step_1/Images/1-Logo.png")></p>
 
 *******************
@@ -60,3 +58,4 @@ The USGS provides earthquake data in a number of different formats, updated ever
 <p align="center"><img align="center" width="75%" height="75%" src="Leaflet_Step_1/Images/Earthquake_info_light.PNG")></p>
 <hr>
  
+Deploy github page didn't work: [All Earthquakes around the world for the past 30 days](https://krla20.github.io/leaflet-challenge/)
