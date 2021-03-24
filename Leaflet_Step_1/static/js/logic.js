@@ -1,5 +1,5 @@
 let link= "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson"
-console.log("data")
+
 
 function markerSize(mag) {
     return mag* 30000;
