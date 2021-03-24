@@ -4,6 +4,7 @@
 ******************************
          
 <p align="center"><img align="center" width="75%" height="75%" src="Leaflet_Step_1/Images/1-Logo.png")></p>
+
 ****************
 ## Story Telling
 
